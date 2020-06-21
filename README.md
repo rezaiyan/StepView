@@ -15,7 +15,6 @@ implementation "ir.alirezaiyan:stepview:1.0.0"
 
 ## Usage
 
-Add `LevelProgressBar`:
 
 ```xml
 
