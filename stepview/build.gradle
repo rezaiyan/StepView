@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -28,5 +29,23 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
 
+tasks.withType(Javadoc).all {
+    enabled = false
+}
+
+publish {
+    userOrg = ""
+    repoName = "Android"
+    groupId = 'ir.alirezaiyan'
+    uploadName = 'stepview'
+    artifactId = 'stepview'
+    publishVersion = '1.0.0'
+    desc = 'StepView'
+    website = 'https://github.com/rezaiyan/StepView'
+    dryRun = false
+
+    bintrayUser = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    bintrayKey = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
 }
