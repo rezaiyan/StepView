@@ -1,0 +1,3 @@
+include ':stepview'
+include ':app'
+rootProject.name = "Step Indicator"

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Step Indicator</string>
+<!--Awesome Icons https://fontawesome.com/v4.7.0/cheatsheet/ -->
+    <string name="step1">&#xf1a0;</string>
+    <string name="step2">&#xf099;</string>
+    <string name="step3">&#xf09a;</string>
+    <string name="step4">&#xf270;</string>
+</resources>
